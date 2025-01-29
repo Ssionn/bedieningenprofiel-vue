@@ -15,7 +15,43 @@
     <RouterView/>
     </div>
   </nav>
-  <div>
-    <H1>Dit gaat over Ons</H1>
+  <div class="about-page bg-gray-50 p-8">
+    <section class="max-w-4xl mx-auto text-center">
+      <h1 class="text-4xl font-extrabold text-gray-800 mb-4">Over ons</h1>
+      <p class="text-gray-600 text-lg mb-8">
+        Jochem Mimpen is reli-ondernemer, geroepen om Gods koninkrijk verder te bouwen.
+        In samenwerking met anderen wil hij bestaande kerken activeren en nieuwe kerken planten.
+        Hij is getrouwd met Joanna en ze hebben drie zoons.
+      </p>
+      <img
+        src="../assets/Jochem.jpeg"
+        alt="Profile Picture"
+        class="rounded-full mx-auto shadow-lg w-40 h-40 object-cover mb-6"
+      />
+    </section>
+  </div>
+  <div class="about-page bg-gray-50 p-8">
+    <section class="max-w-4xl mx-auto text-center">
+      <p class="text-gray-600 text-lg mb-8">
+        Casper is een Bijzondere Jongeman.
+      </p>
+      <img
+        src="../assets/Casper.jpg"
+        alt="Profile Picture"
+        class="rounded-full mx-auto shadow-lg w-40 h-40 object-cover mb-6"
+      />
+    </section>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'AboutMePage'
+}
+</script>
+
+<style>
+.about-page {
+  font-family: 'Inter', sans-serif;
+}
+</style>

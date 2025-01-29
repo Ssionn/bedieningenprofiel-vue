@@ -15,7 +15,67 @@
     <RouterView/>
     </div>
   </nav>
+  <div class="contact-page bg-gray-50 min-h-screen p-8 flex items-center justify-center">
+    <section class="max-w-3xl w-full bg-white p-8 rounded-2xl shadow-lg">
+      <h1 class="text-4xl font-extrabold text-gray-800 mb-6 text-center">Vragen?</h1>
+      <p class="text-gray-600 text-lg mb-8 text-center">
+        Vul dan dit formulier in zodat we je kunnen bereiken.
+      </p>
+
+      <form class="space-y-6">
+        <div>
+          <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Naam</label>
+          <input
+            type="text"
+            id="name"
+            class="w-full border border-gray-300 rounded-lg p-4 text-gray-800 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            placeholder="Naam"
+          />
+        </div>
+
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+          <input
+            type="email"
+            id="email"
+            class="w-full border border-gray-300 rounded-lg p-4 text-gray-800 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            placeholder="Email@hotmail.com"
+          />
+        </div>
+
+        <div>
+          <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Je vraag</label>
+          <textarea
+            id="message"
+            class="w-full border border-gray-300 rounded-lg p-4 text-gray-800 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none"
+            rows="5"
+            placeholder="Typ hier je bericht"
+          ></textarea>
+        </div>
+
+        <div class="flex justify-center mt-6">
+          <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-xl shadow-md hover:bg-blue-500 transition-all">
+            Send Message
+          </button>
+        </div>
+      </form>
+    </section>
+  </div>
   <div>
-    <H1>Dit zijn onze contacten</H1>
+      <section class="text-center py-12">
+      <h2 class="text-3xl font-bold mb-6">Get In Touch</h2>
+      <p class="text-gray-700 mb-4">I'd love to connect and collaborate on interesting projects!</p>
+      <div class="flex justify-center space-x-4">
+        <a href="https://nl.linkedin.com/in/jochemmimpen" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-500">LinkedIn</a>
+      </div>
+    </section>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'ContactPage'
+}
+</script>
+
+

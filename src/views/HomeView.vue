@@ -29,8 +29,16 @@
       </div>
     </div>
   </div>
-  <div>
-    <h1>Test</h1>
+  <div class="home-page bg-white flex items-center justify-center p-8">
+    <section class="max-w-4xl w-full bg-gray-50 p-8 rounded-2xl shadow-lg">
+      <h1 class="text-4xl font-extrabold text-gray-800 mb-4 text-center">Ons doel</h1>
+      <p class="text-gray-600 text-lg mb-8 text-center">
+        Bedieningenprofiel is een online platform dat kerken en organisaties inzicht geeft in de samenstelling van hun team en leden. Op het dashboard verschijnt een groepsanalyse aan de hand van de vijfvoudige bediening.
+        We zijn een 'sociale onderneming'. Dat is een onderneming gericht op impact maken. We zien geld als middel om ons doel te bereiken.
+        Ons doel is om elke kerk capabel te maken om in haar bestemming te wandelen, zowel als collectief, als ook elk individueel lid.
+        In 2024 heeft initiatiefnemer Jochem Mimpen het project Bedieningenprofiel gelanceerd in samenwerking met Bitacademy en Twaanlab. Vier MBO4 studenten zetten het basisproduct in elkaar, zodat kerken en organisaties kunnen kennismaken met Bedieningenprofiel.
+      </p>
+    </section>
   </div>
 </template>
 
@@ -41,9 +49,9 @@
 </style>
 
 <script>
+
 export default {
-  data() {
-  },
+  data() {},
   methods: {
     handleNieuwClick() {
       // Doe iets als er op de "Nieuw?" knop wordt geklikt
@@ -54,6 +62,7 @@ export default {
       console.log('Al lid knop geklikt');
     },
   },
+  name: 'HomePage'
 };
 </script>
 
