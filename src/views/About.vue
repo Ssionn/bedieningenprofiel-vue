@@ -32,9 +32,9 @@
   </div>
   <div class="about-page bg-gray-50 p-8">
     <section class="max-w-4xl mx-auto text-center">
-      <p class="text-gray-600 text-lg mb-8">
-        Casper is een Bijzondere Jongeman.
-      </p>
+      <p class="text-gray-600 text-lg mb-8">Casper Kizewski is student/programmeur, gedreven om innovatieve web-oplossingen te bouwen.
+        Met expertise in Laravel en de TALL stack ontwikkelt hij moderne applicaties.
+        Hij focust zich op het creëren van efficiënte en schaalbare software-oplossingen.</p>
       <img
         src="../assets/Casper.jpg"
         alt="Profile Picture"
