@@ -24,8 +24,8 @@
       <h1 class="text-3xl font-bold mb-4 text-white">Word lid van onze community!</h1>
       <p class="text-lg mb-8 text-white">Doe de gratis test en ontdek wat we te bieden hebben.</p>
       <div class="flex justify-center">
-        <button class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">Nieuw?</button>
-        <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded ml-4">Al lid?</button>
+        <button @click="handleNieuwClick" class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">Nieuw?</button>
+        <button @click="handleAlLidClick" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded ml-4">Al lid?</button>
       </div>
     </div>
   </div>
@@ -50,19 +50,21 @@
 
 <script>
 
-export default {
-  data() {},
-  methods: {
-    handleNieuwClick() {
-      // Doe iets als er op de "Nieuw?" knop wordt geklikt
-      console.log('Nieuw knop geklikt');
+  export default {
+    data() {},
+    methods: {
+      handleNieuwClick() {
+        // Doe iets als er op de "Nieuw?" knop wordt geklikt
+        console.log('Nieuw knop geklikt');
+        window.location.href = 'https://bedieningsprofiel.nl/sign-up';
+      },
+      handleAlLidClick() {
+        // Doe iets als er op de "Al lid?" knop wordt geklikt
+        console.log('Al lid knop geklikt');
+        window.location.href = 'https://bedieningsprofiel.nl/login';
+      },
     },
-    handleAlLidClick() {
-      // Doe iets als er op de "Al lid?" knop wordt geklikt
-      console.log('Al lid knop geklikt');
-    },
-  },
-  name: 'HomePage'
-};
+    name: 'HomePage'
+  };
 </script>
 

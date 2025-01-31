@@ -54,20 +54,11 @@
         </div>
 
         <div class="flex justify-center mt-6">
-          <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-xl shadow-md hover:bg-blue-500 transition-all">
+          <button type="submit" class="bg-purple-500 text-white px-6 py-3 rounded-xl shadow-md hover:bg-purple-700 transition-all">
             Send Message
           </button>
         </div>
       </form>
-    </section>
-  </div>
-  <div>
-      <section class="text-center py-12">
-      <h2 class="text-3xl font-bold mb-6">Get In Touch</h2>
-      <p class="text-gray-700 mb-4">I'd love to connect and collaborate on interesting projects!</p>
-      <div class="flex justify-center space-x-4">
-        <a href="https://nl.linkedin.com/in/jochemmimpen" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-500">LinkedIn</a>
-      </div>
     </section>
   </div>
 </template>
