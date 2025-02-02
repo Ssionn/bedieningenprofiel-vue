@@ -27,10 +27,10 @@
           Hij focust zich op het creëren van efficiënte en schaalbare software-oplossingen.
           </p>
           <div class="flex justify-evenly">
-            <a href="https://www.linkedin.com/in/jouwprofielnaam" target="_blank">
+            <a href="https://nl.linkedin.com/in/CasperKi%C5%BCewski" target="_blank">
             <img src="../assets/linkedin-logo.jpg" alt="LinkedIn" width="32" height="32">
             </a>
-            <a href="https://www.linkedin.com/in/jouwprofielnaam" target="_blank">
+            <a href="https://github.com/Ssionn" target="_blank">
             <img src="../assets/Github.svg" alt="LinkedIn" width="32" height="32">
             </a>
         </div>
@@ -47,14 +47,10 @@
             Hij is getrouwd met Joanna en ze hebben drie zoons.
           </p>
           <div class="flex justify-evenly">
-            <a href="https://www.linkedin.com/in/jouwprofielnaam" target="_blank">
+            <a href="https://nl.linkedin.com/in/jochemmimpen" target="_blank">
             <img src="../assets/linkedin-logo.jpg" alt="LinkedIn" width="32" height="32">
             </a>
-            <a href="https://www.linkedin.com/in/jouwprofielnaam" target="_blank">
-            <img src="../assets/Github.svg" alt="LinkedIn" width="32" height="32">
-            </a>
         </div>
-
       </div>
     </div>
   </div>
