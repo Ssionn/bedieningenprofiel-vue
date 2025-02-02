@@ -15,33 +15,48 @@
     <RouterView/>
     </div>
   </nav>
-  <div class="about-page bg-gray-50 p-8">
-    <section class="max-w-4xl mx-auto text-center">
-      <h1 class="text-4xl font-extrabold text-gray-800 mb-4">Over ons</h1>
-      <p class="text-gray-600 text-lg mb-8">
-        Jochem Mimpen is reli-ondernemer, geroepen om Gods koninkrijk verder te bouwen.
-        In samenwerking met anderen wil hij bestaande kerken activeren en nieuwe kerken planten.
-        Hij is getrouwd met Joanna en ze hebben drie zoons.
-      </p>
-      <img
-        src="../assets/Jochem.jpeg"
-        alt="Profile Picture"
-        class="rounded-full mx-auto shadow-lg w-40 h-40 object-cover mb-6"
-      />
-    </section>
-  </div>
-  <div class="about-page bg-gray-50 p-8">
-    <section class="max-w-4xl mx-auto text-center">
-      <p class="text-gray-600 text-lg mb-8">
-        Casper Kizewski is student/programmeur, gedreven om innovatieve web-oplossingen te bouwen.
-        Met expertise in Laravel en de TALL stack ontwikkelt hij moderne applicaties.
-        Hij focust zich op het creëren van efficiënte en schaalbare software-oplossingen.</p>
-      <img
-        src="../assets/Casper.jpg"
-        alt="Profile Picture"
-        class="rounded-full mx-auto shadow-lg w-40 h-40 object-cover mb-6"
-      />
-    </section>
+  <div class="Cardholder flex justify-evenly text-center bg-gray-100">
+    <div class="Card1 w-96 h-screen mt-6">
+      <div class="Card1inside bg-red-400 h-32 rounded-t-lg">
+        <img src="../assets/Casper.jpg" alt="Profile Picture" class="rounded-full mt-6 mx-auto shadow-lg w-32 h-32 mb-8 object-cover"/>
+      </div>
+      <div class="bg-white rounded-b-lg h-96">
+          <p class="text-gray-600 text-lg mb-[100px]">
+          Casper Kizewski is student/programmeur, gedreven om innovatieve web-oplossingen te bouwen.
+          Met expertise in Laravel en de TALL stack ontwikkelt hij moderne applicaties.
+          Hij focust zich op het creëren van efficiënte en schaalbare software-oplossingen.
+          </p>
+          <div class="flex justify-evenly">
+            <a href="https://www.linkedin.com/in/jouwprofielnaam" target="_blank">
+            <img src="../assets/linkedin-logo.jpg" alt="LinkedIn" width="32" height="32">
+            </a>
+            <a href="https://www.linkedin.com/in/jouwprofielnaam" target="_blank">
+            <img src="../assets/Github.svg" alt="LinkedIn" width="32" height="32">
+            </a>
+        </div>
+        </div>
+    </div>
+    <div class="Card2 w-96 h-screen mt-6">
+      <div class="Card1inside bg-purple-400 h-32 rounded-t-lg">
+        <img src="../assets/Jochem.jpeg" alt="Profile Picture" class="rounded-full mt-6 mx-auto shadow-lg w-32 h-32 mb-8 object-cover"/>
+      </div>
+      <div class="bg-white rounded-b-lg h-96">
+          <p class="text-gray-600 text-lg mb-[100px]">
+            Jochem Mimpen is reli-ondernemer, geroepen om Gods koninkrijk verder te bouwen.
+            In samenwerking met anderen wil hij bestaande kerken activeren en nieuwe kerken planten.
+            Hij is getrouwd met Joanna en ze hebben drie zoons.
+          </p>
+          <div class="flex justify-evenly">
+            <a href="https://www.linkedin.com/in/jouwprofielnaam" target="_blank">
+            <img src="../assets/linkedin-logo.jpg" alt="LinkedIn" width="32" height="32">
+            </a>
+            <a href="https://www.linkedin.com/in/jouwprofielnaam" target="_blank">
+            <img src="../assets/Github.svg" alt="LinkedIn" width="32" height="32">
+            </a>
+        </div>
+
+      </div>
+    </div>
   </div>
 </template>
 
