@@ -39,7 +39,7 @@
             type="email"
             id="email"
             class="w-full border border-gray-300 rounded-lg p-4 text-gray-800 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-            placeholder="Email@hotmail.com"
+            placeholder="Email@email.com"
           />
         </div>
 

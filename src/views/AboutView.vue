@@ -31,7 +31,7 @@
           </p>
           <div class="flex justify-evenly">
             <a href="https://nl.linkedin.com/in/CasperKi%C5%BCewski" target="_blank">
-            <img src="../assets/linkedin-logo.jpg" alt="LinkedIn" width="32" height="32">
+            <img src="../assets/linkedin.png" alt="LinkedIn" width="32" height="32">
             </a>
             <a href="https://github.com/Ssionn" target="_blank">
             <img src="../assets/Github.svg" alt="LinkedIn" width="32" height="32">
@@ -54,7 +54,7 @@
         </p>
           <div class="flex justify-evenly">
             <a href="https://nl.linkedin.com/in/jochemmimpen" target="_blank">
-            <img src="../assets/linkedin-logo.jpg" alt="LinkedIn" width="32" height="32">
+            <img src="../assets/linkedin.png" alt="LinkedIn" width="32" height="32">
             </a>
         </div>
       </div>
