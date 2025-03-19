@@ -1,5 +1,66 @@
 <script setup lang="ts">
+import { GoogleMap, AdvancedMarker, InfoWindow } from 'vue3-google-map';
+import { ref } from 'vue';
 
+const center = { lat: 52.518727, lng: 4.973419 };
+
+const contentElement = document.createElement('div');
+contentElement.textContent = 'House of Hope';
+contentElement.style.backgroundColor = 'white';
+contentElement.style.padding = '5px';
+contentElement.style.borderRadius = '3px';
+
+const markerOptions = {
+  position: center,
+  content: contentElement,
+  title: 'HQ'
+};
+
+const pinOptions = { background: '#FBBC04' };
+
+const googleMapsAPIKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
+
+const infoWindow = ref<google.maps.InfoWindow | null>(null);
+const infoWindowPosition = ref<google.maps.LatLngLiteral | null>(null);
+const markerInfo = ref({
+  title: 'House of Hope',
+  description: 'Dit is een geweldige plek!',
+});
+const infoWindowOptions = ref<google.maps.InfoWindowOptions>({
+    content: `<div><strong>${markerInfo.value.title}</strong><p>${markerInfo.value.description}</p></div>`,
+    position: center,
+});
+
+const isInfoWindowOpen = ref(false); // Boolean ref om de status bij te houden
+
+const openInfoWindow = () => {
+  infoWindowPosition.value = center;
+  if (isInfoWindowOpen.value) {
+    infoWindow.value?.close();
+    infoWindow.value = null;
+    isInfoWindowOpen.value = false;
+  }
+  if (!infoWindow.value) {
+    infoWindow.value = new google.maps.InfoWindow(infoWindowOptions.value);
+    infoWindow.value.open();
+    isInfoWindowOpen.value = true;
+  }
+};
+
+const handleNieuwClick = () => {
+  console.log('Nieuw knop geklikt');
+  window.location.href = 'https://bedieningsprofiel.nl/sign-up';
+};
+
+const handleAlLidClick = () => {
+  console.log('Al lid knop geklikt');
+  window.location.href = 'https://bedieningsprofiel.nl/login';
+};
+
+const closeInfoWindow = () => {
+  infoWindow.value = null;
+  isInfoWindowOpen.value = false;
+};
 </script>
 
 <template>
@@ -16,7 +77,7 @@
         <RouterLink to="/about" href="#" class="hover:text-gray-900">Over Ons</RouterLink>
         <RouterLink to="/contact" href="#" class="hover:text-gray-900">Contact</RouterLink>
       </div>
-    <RouterView/>
+      <RouterView />
     </div>
   </nav>
   <div class="bg-cover bg-center h-screen flex items-center justify-center">
@@ -40,6 +101,19 @@
       </p>
     </section>
   </div>
+
+  <div class="">
+    <GoogleMap
+    :api-key="googleMapsAPIKey"
+    style="width: 100%; height: 500px"
+    :center="center"
+    :zoom="15"
+    map-id="e6d3ab2fbdda1585"
+    >
+    <AdvancedMarker :options="markerOptions" :pin-options="pinOptions" @click="openInfoWindow"/>
+    <InfoWindow :position="infoWindowPosition" :options="infoWindowOptions" @closeclick="closeInfoWindow"/>
+    </GoogleMap>
+  </div>
 </template>
 
 <style>
@@ -47,24 +121,3 @@
   background-image: url('../assets/florence.jpg');
 }
 </style>
-
-<script>
-
-  export default {
-    data() {},
-    methods: {
-      handleNieuwClick() {
-        // Doe iets als er op de "Nieuw?" knop wordt geklikt
-        console.log('Nieuw knop geklikt');
-        window.location.href = 'https://bedieningsprofiel.nl/sign-up';
-      },
-      handleAlLidClick() {
-        // Doe iets als er op de "Al lid?" knop wordt geklikt
-        console.log('Al lid knop geklikt');
-        window.location.href = 'https://bedieningsprofiel.nl/login';
-      },
-    },
-    name: 'HomePage'
-  };
-</script>
-
