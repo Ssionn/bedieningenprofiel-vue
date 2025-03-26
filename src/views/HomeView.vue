@@ -1,8 +1,13 @@
 <script setup lang="ts">
 import { GoogleMap, AdvancedMarker, InfoWindow } from 'vue3-google-map';
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 
 const center = { lat: 52.518727, lng: 4.973419 };
+
+const testClick = () => {
+  console.log('Marker clicked!');
+  openInfoWindow(); // openInfoWindow aanroepen bij click
+};
 
 const contentElement = document.createElement('div');
 contentElement.textContent = 'House of Hope';
@@ -27,22 +32,34 @@ const markerInfo = ref({
   description: 'Dit is een geweldige plek!',
 });
 const infoWindowOptions = ref<google.maps.InfoWindowOptions>({
-    content: `<div><strong>${markerInfo.value.title}</strong><p>${markerInfo.value.description}</p></div>`,
+    content: `<div><strong><span class="math-inline">\{markerInfo\.value\.title\}</strong\><p\></span>{markerInfo.value.description}</p></div>`,
     position: center,
 });
 
-const isInfoWindowOpen = ref(false); // Boolean ref om de status bij te houden
+const isInfoWindowOpen = ref(false);
+const isMapLoaded = ref(false); // Boolean ref to track map loading
 
 const openInfoWindow = () => {
+  console.log('openInfoWindow called'); // Controleer of de functie wordt uitgevoerd
+  if (!isMapLoaded.value) {
+    console.log('Map not loaded'); // Controleer of de kaart is geladen
+    return;
+  }
+  console.log('Map loaded'); // Controleer of de kaart is geladen
   infoWindowPosition.value = center;
+  console.log('InfoWindow Position:', infoWindowPosition.value); // Controleer de positie
   if (isInfoWindowOpen.value) {
     infoWindow.value?.close();
     infoWindow.value = null;
     isInfoWindowOpen.value = false;
+    console.log('InfoWindow closed'); // Controleer of het infovenster is gesloten
   }
   if (!infoWindow.value) {
+    console.log('Creating InfoWindow'); // Controleer of het infovenster wordt gemaakt
     infoWindow.value = new google.maps.InfoWindow(infoWindowOptions.value);
+    console.log('InfoWindow created'); // Controleer of het infovenster is gemaakt
     infoWindow.value.open();
+    console.log('InfoWindow opened'); // Controleer of het infovenster is geopend
     isInfoWindowOpen.value = true;
   }
 };
@@ -61,6 +78,16 @@ const closeInfoWindow = () => {
   infoWindow.value = null;
   isInfoWindowOpen.value = false;
 };
+
+const handleMapLoaded = () => {
+  console.log('Map Loaded Event Fired')
+  console.log('Map Loaded');
+  isMapLoaded.value = true; // Set map loaded to true
+};
+
+onMounted(() => {
+  console.log("Component Mounted");
+});
 </script>
 
 <template>
@@ -109,8 +136,9 @@ const closeInfoWindow = () => {
     :center="center"
     :zoom="15"
     map-id="e6d3ab2fbdda1585"
+    @loaded="handleMapLoaded"
     >
-    <AdvancedMarker :options="markerOptions" :pin-options="pinOptions" @click="openInfoWindow"/>
+    <AdvancedMarker :options="markerOptions" :pin-options="pinOptions" @click="testClick"/>
     <InfoWindow :position="infoWindowPosition" :options="infoWindowOptions" @closeclick="closeInfoWindow"/>
     </GoogleMap>
   </div>
